@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from '../components/common/Navbar';
 import Filter from '../components/Filter/Filter';
-import Map from '../components/common/Map';
+import Map from '../Map/Map';
 import CourtLists from './ListsCourt';
 import styled from 'styled-components';
 

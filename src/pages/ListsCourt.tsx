@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import CourtDetail from './DetailCourt';
 import { CourtDetailProps } from '../types/CourtType';
+// import Map from '../Map/Map';
 
 const CourtInfoContainer = styled.div<{ expanded: boolean }>`
   // z-index: 20;
@@ -56,6 +57,9 @@ const CourtLists: React.FC = () => {
   const [selectedCourt, setSelectedCourt] = useState<CourtDetailProps | null>(
     null
   );
+  // const [distanceFromCourt, setDistanceFromCourt] = useState<number | null>(
+  //   null
+  // );
 
   const handleDragStart = (e: any) => {
     e.preventDefault();
@@ -69,9 +73,14 @@ const CourtLists: React.FC = () => {
     distance: '내 위치에서 5km',
     thumbnail: 'https://example.com/thumbnail.jpg',
     type: '코트',
-    privacy: '하드',
+    courtMaterial: '하드',
     phone: '02-0202-0303',
-    reservationLink: 'https://naver.com',
+    reservationLink: '',
+    price: 15000,
+    usageTime: '06:00~22:00',
+    indoorOrOutdoor: '실내',
+    mapX: 37.3595704,
+    mapY: 127.105399,
   };
 
   const handleCourtClick = () => {
@@ -84,6 +93,7 @@ const CourtLists: React.FC = () => {
 
   return (
     <div>
+      {/* <Map setDistanceFromCourt={setDistanceFromCourt} /> */}
       <CourtInfoContainer expanded={expanded}>
         <DragHandle onMouseDown={handleDragStart}></DragHandle>
         {selectedCourt ? (
@@ -98,6 +108,11 @@ const CourtLists: React.FC = () => {
               <div>{court.name}</div>
               <div>{court.address}</div>
               <div>{court.distance}</div>
+              {/* <div>
+                {distanceFromCourt
+                  ? `내 위치에서 ${distanceFromCourt.toFixed(2)}km`
+                  : court.distance}
+              </div> */}
             </CourtInfo>
           </CourtItem>
         )}

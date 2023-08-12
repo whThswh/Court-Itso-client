@@ -5,8 +5,13 @@ export type CourtDetailProps = {
     distance: string;
     thumbnail: string;
     type: string;
-    privacy: string;
+    courtMaterial: string;
     phone: string;
     reservationLink: string;
+    price: number;
+    usageTime: string;
+    indoorOrOutdoor: string;
+    mapX: number;
+    mapY: number;
   };
 };
