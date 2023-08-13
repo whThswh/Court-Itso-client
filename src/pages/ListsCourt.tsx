@@ -5,18 +5,21 @@ import { CourtDetailProps } from '../types/CourtType';
 // import Map from '../Map/Map';
 
 const CourtInfoContainer = styled.div<{ expanded: boolean }>`
-  // z-index: 20;
+  z-index: 20;
   position: absolute;
   bottom: 0;
-  // max-width: 480px;
-  width: 450px;
+  // max-width: 500px;
+  width: 452px;
+  // width: 95%;
   background-color: white;
+  // margin: 5px;
   padding: 0.7rem;
   height: ${(props) => (props.expanded ? 'calc(100vh - 100px)' : '200px')};
-  overflow: scroll;
+  overflow: hidden;
   transition: height 0.3s ease-in-out;
-  border: 3px solid black;
-  border-radius: 10px;
+  border: 3px solid white;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 `;
 
 const DragHandle = styled.div`
@@ -69,8 +72,8 @@ const CourtLists: React.FC = () => {
   // 더미
   const court = {
     name: '테니스장A',
-    address: '영동구 영동대로 30',
-    distance: '내 위치에서 5km',
+    address: '강남구 강남대로 10',
+    distance: '내 위치에서 00km',
     thumbnail: 'https://example.com/thumbnail.jpg',
     type: '코트',
     courtMaterial: '하드',

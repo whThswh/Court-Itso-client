@@ -5,17 +5,18 @@ import MyLocationIcon from '@mui/icons-material/MyLocation';
 const clientId = process.env.REACT_APP_CLIENT_ID;
 
 const MapContainer = styled.div`
+  z-index: 5;
   position: relative;
   width: 100%;
   // height: 100vh;
-  height: calc(100vh - 150px);
+  height: calc(100vh - 300px);
 `;
 
 const MyLocationButton = styled.button`
   z-index: 10;
   position: absolute;
   right: 10px;
-  bottom: 10px;
+  bottom: 40px;
   background: none;
   border: none;
   cursor: pointer;

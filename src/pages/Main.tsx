@@ -7,7 +7,7 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   max-width: 480px;
-  // height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   margin: 0 20px;
@@ -20,13 +20,21 @@ const Container = styled.div`
   transform: translateX(-50%);
 `;
 
+const MainContainer = styled.div`
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+`;
+
 function Main() {
   return (
     <Container>
       <Navbar />
-      <Filter />
-      <Map />
-      <CourtLists />
+      <MainContainer>
+        <Filter />
+        <Map />
+        <CourtLists />
+      </MainContainer>
     </Container>
   );
 }
