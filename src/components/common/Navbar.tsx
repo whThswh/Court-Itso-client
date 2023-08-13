@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ReactComponent as Logo } from 'Logo.svg';
+import { ReactComponent as Logo } from 'logo.svg';
 
 const NavbarContainer = styled.nav`
   display: flex;
